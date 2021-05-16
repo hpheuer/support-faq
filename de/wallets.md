@@ -8,6 +8,8 @@ Ein privater Schlüssel ist eine zufällig generierte Zeichenfolge, die einen ö
 
 Die besten Praktiken für die Sicherung deines privaten Schlüssels hängen von der Nutzung des Geräts durch den Einzelnen ab. Es gibt nicht die eine goldene Regel, die für alle gilt. Im heutigen Zeitalter ist die Online-Verwahrung von Schlüsseln oft anfällig für Schwachstellen - sei es die Sicherheit des eigenen Online-Geräts oder der Zugriff auf physische Server. Daher ist es eine gute Vorgehensweise, deine privaten Schlüssel offline auf einem digitalen Medium aufzubewahren. Du willst keine unverschlüsselten oder leicht zu entschlüsselnden Formate von privaten Schlüsseln auf deinem Online-Gerät haben.
 
+Die privaten Schlüssel können auch auf speziellen, externen kleinen Geräten gesichert werden, und sind damit sicher vor Online-Angriffen. Aktuell werden Trezor und Ledger-Geräte unterstützt.
+
 #### Hierarchische Deterministische (HD) Wallets {docsify-ignore}
 
 Hierarchische Deterministische (HD) Wallets erlauben es Nutzern, Schlüssel (private und öffentliche) von einem gemeinsamen Seed abzuleiten ( unter Verwendung von BIP39 Mnemonics), die einfacher zu sichern sind und bessere Wallet-Funktionen und Privatsphäre der Historie ermöglichen. Das bedeutet, dass man eine Kombination von Wörtern erhält (12, 15, 24, 25 oder 27 - abhängig von der Art der Wallet-Software, die man wählt) und der Hash dieser Wörter tatsächlich den einzigartigen privaten Schlüssel ergibt, was den Zugriff und die Sicherheit erleichtert. Eines der Merkmale einer HD-Wallet ist, dass eine einzelne Wallet bis zu 2147483647 Konten mit 2147483647 Adressen enthalten kann, die alle mit einer einzigen Wallet verbunden sind - und jede mit ihrer eigenen einzigartigen Historie von Transaktionsdaten.
@@ -19,15 +21,15 @@ Du kannst [dieses Wiki](https://github.com/input-output-hk/cardano-wallet/wiki/A
 
 Du wirst sehen, dass es eine Reihe von verschiedenen Kombinationen der Anzahl von Wörtern für Mnemonics gibt, die in verschiedenen Wallets unterstützt werden. Nur um eine kurze Zusammenfassung zu geben, welcher Wallet-Typ wie viele Seeds unterstützt:
 
-|Wallet            |Era      |Type      |Number of words                |
-|------------------|---------|----------|-------------------------------|
-|Daedalus          |Byron    |Hot/Online|12                             |
-|Daedalus          |Byron    |Paper     |27 (18 on paper + 9 digital)   |
-|Daedalus Rewards  |ITN      |Hot/Online|15                             |
-|Yoroi             |Byron/ITN|Hot/Online|15                             |
-|Yoroi             |Byron/ITN|Paper     |21 on paper + Spending password|
-|Daedalus          |Shelley  |Hot/Online|24                             |
-|Yoroi             |Shelley  |Hot/Online|15 / 24                        |
+|Wallet            |Era      |Type           |Number of words                |
+|------------------|---------|---------------|-------------------------------|
+|Daedalus          |Byron    |Hot/Online     |12                             |
+|Daedalus          |Byron    |Paper          |27 (18 on paper + 9 digital)   |
+|Daedalus Rewards  |ITN      |Hot/Online     |15                             |
+|Yoroi             |Byron/ITN|Hot/Online     |15                             |
+|Yoroi             |Byron/ITN|Paper          |21 on paper + Spending password|
+|Daedalus          |Shelley  |Hot/Online/Cold|24                             |
+|Yoroi             |Shelley  |Hot/Online/Cold|15 / 24                        |
 
 #### Guthaben in einer Wallet versus Adresse {docsify-ignore}
 
